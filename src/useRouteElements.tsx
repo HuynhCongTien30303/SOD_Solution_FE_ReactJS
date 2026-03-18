@@ -11,6 +11,7 @@ import AboutUs from './pages/user/AboutUs'
 import PrivacyPolicy from './pages/user/PrivacyPolicy'
 import Services from './pages/user/Services'
 import Partners from './pages/user/Partners'
+import Procedure from './pages/user/Procedure/Procedure'
 import { useContext } from 'react'
 import { AppContext } from './contexts/app.context'
 import UserLayout from './pages/user/User/layouts/UserLayout'
@@ -98,6 +99,14 @@ export default function useRouteElements() {
       element: (
         <MainLayout>
           <Partners />
+        </MainLayout>
+      )
+    },
+    {
+      path: path.procedure,
+      element: (
+        <MainLayout>
+          <Procedure />
         </MainLayout>
       )
     },

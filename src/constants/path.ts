@@ -6,6 +6,7 @@ const path = {
   privacyPolicy: '/privacy-policy',
   services: '/services',
   partners: '/partners',
+  procedure: '/procedure',
   user: '/user',
   profile: '/user/profile',
   changePassword: '/user/password',

@@ -1,6 +1,5 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import SODLogo from 'src/assets/images/SOD_Logo.png'
-import ProcedurePdf from 'src/assets/docs/QuyTrinh.pdf'
 import Popover from '../Popover'
 import { useContext } from 'react'
 import { AppContext } from 'src/contexts/app.context'
@@ -14,7 +13,6 @@ export default function Header() {
   const { isAuthenticated, setIsAuthenticated, setProfile, profile } = useContext(AppContext)
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     `transition-colors ${isActive ? 'text-orange-500' : 'text-gray-800 hover:text-orange-500'}`
-  const externalNavClass = 'transition-colors text-gray-800 hover:text-orange-500 font-bold'
 
   const handleLogout = () => {
     clearAccessTokenFromLS()
@@ -42,9 +40,9 @@ export default function Header() {
           <NavLink to='/partners' className={navLinkClass}>
             Đối tác
           </NavLink>
-          <a href={ProcedurePdf} target='_blank' rel='noopener noreferrer' className={externalNavClass}>
+          <NavLink to={path.procedure} className={navLinkClass}>
             Quy trình
-          </a>
+          </NavLink>
           <NavLink to={path.projectDashboard} className={navLinkClass}>
             Dự án của tôi
           </NavLink>
